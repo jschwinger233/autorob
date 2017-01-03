@@ -1,3 +1,9 @@
+if [ -f /etc/redhat-release ]; then
+    yum install gpg
+else
+    brew install gpg
+fi
+
 LOCAL_BIN=/usr/local/bin
 if [ ! -d "$LOCAL_BIN" ]; then
     mkdir -p $LOCAL_BIN 
