@@ -1,4 +1,4 @@
-# make sure CMake has been installed properly!
+# vim 7.4.143+ and CMake required
 
 # update .vimrc
 cp vimrc ~/.vimrc
