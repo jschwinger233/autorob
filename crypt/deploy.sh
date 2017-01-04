@@ -1,8 +1,4 @@
-if [ -f /etc/redhat-release ]; then
-    yum install gpg
-else
-    brew install gpg
-fi
+# gpg required
 
 LOCAL_BIN=/usr/local/bin
 if [ ! -d "$LOCAL_BIN" ]; then
