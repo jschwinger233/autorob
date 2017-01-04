@@ -1,4 +1,5 @@
 # gpg required
+# run with sudo
 
 LOCAL_BIN=/usr/local/bin
 if [ ! -d "$LOCAL_BIN" ]; then
