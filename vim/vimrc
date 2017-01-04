@@ -1,0 +1,16 @@
+se nocp " nocompatible
+se nu
+se ai
+se sw=4
+se sts=4
+se et
+se ru
+se is " incsearch
+se hls
+colo desert
+syntax on
+
+filetype off
+call pathogen#infect()
+call pathogen#helptags()
+filetype plugin indent on
