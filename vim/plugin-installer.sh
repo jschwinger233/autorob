@@ -1,6 +1,8 @@
 # vim 7.4.143+ and CMake required
 # run with sudo
 
+set -x
+
 # update .vimrc
 cp vimrc ~/.vimrc
 

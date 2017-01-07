@@ -1,6 +1,8 @@
 # gpg required
 # run with sudo
 
+set -x
+
 LOCAL_BIN=/usr/local/bin
 if [ ! -d "$LOCAL_BIN" ]; then
     mkdir -p $LOCAL_BIN 
