@@ -7,10 +7,14 @@ while [ "$?" != "0" ]; do
     MY_GITHUB=$(curl "https://github.com/$ME" --connect-timeout 3)
 done
 
+if [ "$DEBUG" == "1" ]; then
+    echo $MY_GITHUB > github.ignore
+fi
+
 TODAY=$(date +%Y-%m-%d)
 echo $MY_GITHUB | grep -q 'fill="#eeeeee" data-count="0" data-date="'$TODAY
 if [ "$?" != "0" ]; then
-    echo 'pushed today, congrats!'
+    echo 'pushed already, congrats!'
     exit 0
 fi
 
