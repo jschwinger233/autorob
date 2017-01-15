@@ -18,6 +18,7 @@ if [ "$?" != "0" ]; then
     exit 0
 fi
 
+echo 'busy day, push now!'
 CUR_DIR=$(cd $(dirname $0); pwd)
-echo -n ' ' >> $CUR_DIR/append.ignore
+echo $TODAY >> $CUR_DIR/append
 cd $CUR_DIR && git commit -am'auto-commit'
