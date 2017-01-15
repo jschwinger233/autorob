@@ -1,3 +1,4 @@
+#!/bin/bash
 # Auto-commit for 2017 Plan
 
 ME=jschwinger23
