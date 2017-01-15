@@ -23,5 +23,5 @@ git clone https://github.com/klen/python-mode.git ~/.vim/bundle/python-mode
 
 # install YouCompleteMe
 git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe/
-# python-dev required
-(cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && sh install.sh)
+# python-devel & cmake required
+(cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && python install.py)
