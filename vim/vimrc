@@ -9,8 +9,3 @@ se is " incsearch
 se hls
 colo desert
 syntax on
-
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
-filetype plugin indent on
