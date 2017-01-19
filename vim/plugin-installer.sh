@@ -1,4 +1,4 @@
-# run with sudo
+# ensure python-devel and cmake installed
 
 set -x
 
@@ -31,7 +31,7 @@ git clone https://github.com/klen/python-mode.git ~/.vim/bundle/python-mode
 # install YouCompleteMe
 git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe/
 # python-devel & cmake required
-(cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && python install.py)
+(cd ~/.vim/bundle/YouCompleteMe/ && git submodule update --init --recursive && sudo python install.py)
 
 cat <<'EOF' >> ~/.vimrc
 let g:ycm_autoclose_preview_window_after_completion=1
