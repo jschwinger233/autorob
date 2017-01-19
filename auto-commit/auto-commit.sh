@@ -5,12 +5,13 @@ ME=jschwinger23
 TODAY=$(date +%Y-%m-%d)
 NOW=$(date +%Y-%m-%dT%H:%M:%S)
 CUR_DIR=$(cd $(dirname $0); pwd)
+TIMEOUT=5
 
 exec 3>$CUR_DIR/append
 
-MY_GITHUB=$(curl "https://github.com/$ME" --connect-timeout 3)
+MY_GITHUB=$(curl "https://github.com/$ME" --connect-timeout $TIMEOUT)
 while [ "$?" != "0" ]; do
-    MY_GITHUB=$(curl "https://github.com/$ME" --connect-timeout 3)
+    MY_GITHUB=$(curl "https://github.com/$ME" --connect-timeout $TIMEOUT)
 done
 
 if [ "$DEBUG" == "1" ]; then
