@@ -6,7 +6,7 @@ TODAY=$(date +%Y-%m-%d)
 NOW=$(date +%Y-%m-%dT%H:%M:%S)
 CUR_DIR=$(cd $(dirname $0); pwd)
 
-exec 3>>$CUR_DIR/append
+exec 3>$CUR_DIR/append
 
 MY_GITHUB=$(curl "https://github.com/$ME" --connect-timeout 3)
 while [ "$?" != "0" ]; do
@@ -19,10 +19,10 @@ fi
 
 echo $MY_GITHUB | grep -Pq 'data-count="(?!0)[^"]+" data-date="'$TODAY
 if [ $? -eq 0 ]; then
-    echo $NOW':pushed already, congrats!' >>&3
+    echo $NOW':pushed already, congrats!' >&3
     exit 0
 fi
 
-echo $NOW':busy day, push now!' > &3
+echo $NOW':busy day, push now!' >&3
 cd $CUR_DIR && git commit -am'auto-commit'$NOW && git push origin master
 exec 3>&-
