@@ -27,6 +27,9 @@ EOF
 
 # install Python-mode
 git clone https://github.com/klen/python-mode.git ~/.vim/bundle/python-mode
+tee -a ~/.vimrc <<'EOF'
+let g:pymode_lint_cwindow = 0
+EOF
 
 # install YouCompleteMe
 git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe/
