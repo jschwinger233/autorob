@@ -40,3 +40,10 @@ cat <<'EOF' >> ~/.vimrc
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 EOF
+
+# install vim-markdown
+(cd ~/.vim/bundle && git clone https://github.com/plasticboy/vim-markdown.git)
+
+# install python-vim-install-markdown
+sudo pip install markdown pygments
+git clone git@github.com:isnowfy/python-vim-instant-markdown.git ~/.vim/bundle/python-vim-instant-markdown/
