@@ -7,7 +7,7 @@ se et
 se ru
 se is " incsearch
 se hls
-se nofoldenable
+se nofen " nofoldenable
 se completeopt-=preview
 colo molokai
 syntax on
