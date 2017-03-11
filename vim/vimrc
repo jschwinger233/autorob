@@ -7,5 +7,11 @@ se et
 se ru
 se is " incsearch
 se hls
-colo desert
+se nofoldenable
+se completeopt-=preview
+colo molokai
 syntax on
+
+let g:pymode_lint_cwindow=0
+let g:pymode_repo_completion=0
+let g:pymode_rope_complete_on_dot=0

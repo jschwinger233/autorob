@@ -47,3 +47,7 @@ EOF
 # install python-vim-install-markdown
 sudo pip install markdown pygments
 git clone git@github.com:isnowfy/python-vim-instant-markdown.git ~/.vim/bundle/python-vim-instant-markdown/
+
+# install colorscehem Moloka
+git clone git@github.com:tomasr/molokai.git ~/.vim/molokai
+mv ~/.vim/molokai/colors ~/.vim/
